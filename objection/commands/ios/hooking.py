@@ -306,7 +306,7 @@ def search(args: list) -> None:
         return
 
     api = state_connection.get_api()
-    pattern = args[0]
+    pattern = args[0].lower()
 
     results = api.ios_hooking_search(pattern)
     data = {}
